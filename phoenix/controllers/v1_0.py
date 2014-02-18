@@ -1,8 +1,8 @@
-from pecan.rest import RestController
+from pecan import rest
 
-from phoenix.controllers.help import HelpController
+from phoenix.controllers import help
 
 
-class V1_0Controller(RestController):
+class V1_0Controller(rest.RestController):
 
-    help = HelpController()
+    help = help.HelpController()

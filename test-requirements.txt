@@ -1,2 +1,8 @@
+# Metrics and style
+hacking>=0.8.0,<0.9
+
+# Testing
 coverage
 nose
+testrepository>=0.0.17
+testtools>=0.9.32,<0.9.35
