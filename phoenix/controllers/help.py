@@ -1,17 +1,17 @@
 import platform
 
-from pecan import expose
-from pecan.rest import RestController
+import pecan
+from pecan import rest
 
 
-class HelpController(RestController):
+class HelpController(rest.RestController):
 
     _custom_actions = {
         'apihealth': ['GET']
     }
 
-    @expose('json')
+    @pecan.expose('json')
     def apihealth(self):
-        return { 'SystemStatus': [],
-                 'Status': 'OK',
-                 'MachineName': platform.node() }
+        return {'SystemStatus': [],
+                'Status': 'OK',
+                'MachineName': platform.node()}
